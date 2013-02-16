@@ -21,16 +21,18 @@
 
 <?php if( (mysql_num_rows($result) >= 1)): ?>
 
-<html>
-  <BODY bgcolor="black" text="white".
-      link="green" vlink="purple" alink="purple">
-
+  <html>
       <title>
         Zuul Inventory
       </title>
       <head>
         <p align="center">Zull Inventory and prices, as managed by bajr.</p>
         <p align="center"><a href="index.html">Home</a></p>
+
+      </head>
+  <body bgcolor="black" text="white".
+      link="green" vlink="purple" alink="purple">
+
       <?php
         echo "<center><table border='1'>
               <tr>
@@ -46,12 +48,10 @@
             echo "</tr>";
           }
         echo "</table>";
-
      ?>
+    </body>
 
-      </head>
-
-    </html>
+  </html>
 <?php else: ?>
 <html>
       <title>

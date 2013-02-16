@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
       </title>
       <head>
         <p align="center">Data processing failed! Either you aren't a registered user or you didn't fill out all of the data fields!</p>
-        <p align="center"><a href="zuulmain.html">Home</a></p>
+        <p align="center"><a href="index.html">Home</a></p>
       </head>
 
 <?php endif; ?>
