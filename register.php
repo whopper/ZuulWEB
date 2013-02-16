@@ -22,13 +22,23 @@ if (isset($_POST['submit'])) {
     define ('DB_NAME', 'zuul');
     $dbc = @mysql_connect (DB_HOST, DB_USER, DB_PASSWORD) or die('Failure: ' . mysql_error() );
     mysql_select_db(DB_NAME) or die ('Could not select database: ' . mysql_error() );
-    $query = "INSERT INTO users VALUES ('','$username','0.00')";
-    $q = mysql_query($query);
 
-    if (!$q) {
-      exit("&lt;p&gt;MySQL Insertion failure.&lt;/p&gt;");
+    // First, ensure the user doesn't already exist
+    $checkuserquery = "SELECT * FROM users WHERE username='$username'";
+    $checkuserdo    = mysql_query($checkuserquery);
+
+    // Insert the new user into the DB
+    if( mysql_num_rows($checkuserdo) === 0) {
+      $adduserquery = "INSERT INTO users VALUES ('','$username','0.00')";
+      $adduserdo    = mysql_query($adduserquery);
+
+      if (!$adduserdo) {
+        exit("&lt;p&gt;MySQL Insertion failure.&lt;/p&gt;");
+      } else {
+        mysql_close();
+      }
     } else {
-      mysql_close();
+      $error = TRUE;
     }
   }
 }
@@ -53,7 +63,7 @@ if (isset($_POST['submit'])) {
                to purchase Zuul snacks!
           </UL>
           </p>
-        <p align="center"><a href="zuulmain.html">Home</a></p>
+        <p align="center"><a href="index.html">Home</a></p>
 
 
         <p align="center"><a href="eggs.html"><img src="images/square.jpg"
@@ -68,11 +78,13 @@ if (isset($_POST['submit'])) {
 
 <?php else: ?>
 <html>
+  <BODY bgcolor="black" text="white".
+      link="green" vlink="purple" alink="purple">
       <title>
         Error! :(
       </title>
       <head>
-        <p align="center">Data processing failed! You didn't fill out all the fields! :(</p>
+        <p align="center">Data processing failed! Either you didn't fill out the required field or you are already registered!</p>
         <p align="center"><a href="../index.html">Home</a></p>
       </head>
 

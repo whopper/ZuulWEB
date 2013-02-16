@@ -29,7 +29,7 @@
   </title>
   <head>
     <p align="center">Zuul Balance </p>
-    <p align="center"><a href="zuulmain.html">Home</a></p>
+    <p align="center"><a href="index.html">Home</a></p>
 
   </head>
   <body>
@@ -50,7 +50,7 @@
           {
             echo "<tr>";
             echo "<td>" . $row['username'] . "</td>";
-            echo "<td>" . $row['userbalance'] . "</td>";
+            echo "<td>" . "$" . $row['userbalance'] . "</td>";
             echo "</tr>";
           }
         echo "</table>";

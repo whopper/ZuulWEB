@@ -30,7 +30,7 @@
   <head>
 
     <h1><center>Add ZuulCash!<center></h1>
-    <p align="center"><a href="zuulmain.html">Home</a></p>
+    <p align="center"><a href="index.html">Home</a></p>
 
     Add funds to purchase Zuul Snacks!
     <UL>
@@ -59,7 +59,7 @@
       </SELECT></p>
 
       <p align="center"> 
-      Amount to Add (i.e. 5.00): <input type="float" name="addbalance"><br></p>
+      Amount to Add: $<input type="float" name="addbalance"><br></p>
 
         <br><br>
         <center><input type="submit" name="submit" value="submit"><center>

@@ -31,7 +31,7 @@
   </title>
   <head>
     <h1><center>Check Out!<center></h1>
-    <p align="center"><a href="zuulmain.html">Home</a></p>
+    <p align="center"><a href="index.html">Home</a></p>
 
     Purchase Zuul Snacks!
     <UL>

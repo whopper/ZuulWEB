@@ -30,7 +30,7 @@
       </title>
       <head>
         <p align="center">Zull Inventory and prices, as managed by bajr.</p>
-        <p align="center"><a href="zuulmain.html">Home</a></p>
+        <p align="center"><a href="index.html">Home</a></p>
       <?php
         echo "<center><table border='1'>
               <tr>
@@ -42,7 +42,7 @@
           {
             echo "<tr>";
             echo "<td>" . $row['itemname'] . "</td>";
-            echo "<td>" . $row['itemprice'] . "</td>";
+            echo "<td>$" . $row['itemprice'] . "</td>";
             echo "</tr>";
           }
         echo "</table>";

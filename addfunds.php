@@ -3,8 +3,8 @@
 if (isset($_POST['submit'])) {
   // Form submitted - handle input
 
-  $username       = $_POST['username'];
-  $addbalance     = $_POST['addbalance'];
+  $username   = $_POST['username'];
+  $addbalance = str_replace('$', '', $_POST['addbalance']);
 
   // Error checking and Security
   $error = FALSE;
@@ -64,7 +64,7 @@ if ( isset($username) && isset($addbalance) && $error == FALSE ) {
       </title>
       <head>
         <p align="center">Thanks! Your funds have been added!</p>
-        <p align="center"><a href="zuulmain.html">Home</a></p>
+        <p align="center"><a href="index.html">Home</a></p>
 
       </head>
 
@@ -77,7 +77,7 @@ if ( isset($username) && isset($addbalance) && $error == FALSE ) {
       </title>
       <head>
         <p align="center">Data processing failed! Either you aren't a registered user or you didn't fill out all of the data fields!</p>
-        <p align="center"><a href="zuulmain.html">Home</a></p>
+        <p align="center"><a href="index.html">Home</a></p>
       </head>
 
 <?php endif; ?>

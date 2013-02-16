@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
       $pricecheck = mysql_query("SELECT itemprice FROM inventory WHERE itemname = '$item'");
       $row        = mysql_fetch_array($pricecheck);
 
-      $total = $total + $row['itemprice'];
+      $total      = $total + $row['itemprice'];
     }
 
     // Do math to figure out the user's new balance
@@ -49,9 +49,17 @@ if (isset($_POST['submit'])) {
 
       if (!$newbalance) {
         exit("&lt;p&gt;MySQL Insertion failure.&lt;/p&gt;");
-      } else {
-        mysql_close();
       }
+
+    // If user has more than $10 in debt, yell at them
+      $debtquery    = "SELECT userbalance FROM users WHERE username = '$username'";
+      $debtquerydo  = mysql_query($debtquery);
+      $debtrow      = mysql_fetch_array($debtquerydo);
+      if ( $debtrow['userbalance'] < -10) {
+        echo $username . ",<br><br>";
+        echo "You owe the Zuul more than $10.00! Please be considerate of those who work hard to make the Zuul a reality and pay up immediately!";
+      }
+    mysql_close();
   }
 }
 ?>
@@ -67,7 +75,7 @@ if (isset($_POST['submit'])) {
       </title>
       <head>
         <p align="center">Thanks for your purchase!</p>
-        <p align="center"><a href="zuulmain.html">Home</a></p>
+        <p align="center"><a href="index.html">Home</a></p>
 
       </head>
     </html>
