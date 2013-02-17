@@ -1,10 +1,10 @@
 h1   {color:white;font-family:serif;text-align:center;}
+h3   {color:white;font-family:serif;text-align:center;}
 h5   {color:white;font-family:serif;text-align:center;}
 p    {margin-left:20px;color:white;text-align:center;}
 hr   {width:500;size:6;color:red;}
 li   {color:white;font-family:serif;list-style-position:inside;}
 a    {color:green;font-family:serif;text-align:center;}
-img  {height:130;width:130;border:0;}
 
 body {
   background-color:black;
@@ -16,6 +16,8 @@ body > #leftmenu {margin-left:60px;width:140px;height:580px;}
 body > #rightmenu {margin-right:60px; width:140px;height:550px}
 body > #lowermenu {margin-top:240px;margin-left:60px;width:140px;height:40px}
 body > .homebutton {margin: 0 auto;width:100px;height:50px;}
+body > #endmessage {margin: 0 auto;width:200px;height:40px;}
+
 
 #mainlogo {
   display:block;
@@ -25,6 +27,22 @@ body > .homebutton {margin: 0 auto;width:100px;height:50px;}
 
 #header {
   background-color:#480000;
+  height=80px;
+  width=100px;
+}
+
+#endmessage {
+  width:200px;
+  text-align:left;
+  font-size:16;
+  border-style:groove;
+  border-width:3px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+  background: rgb(0, 0, 0) transparent;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #mainmenubuttons {
@@ -134,5 +152,4 @@ body > .homebutton {margin: 0 auto;width:100px;height:50px;}
 
 .homelink {
   text-align:center;
-
 }

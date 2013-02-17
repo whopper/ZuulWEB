@@ -47,25 +47,25 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Thank you for your submission!</title>
-      <p align="center">Thanks!
-      You are now registered.
-      <ul>
-      <li> Next, select 'Add ZuulCash' from
-           the home screen to manage your Zuul balance.
-      <li> Finally, you may use the 'Check Out!' option 
-             to purchase Zuul snacks!<br>
-      </ul>
-      <center><a href="index.html">Home</a><center></p>
-
-
-      <p align="center"><a href="eggs.html"><img src="images/square.jpg"
-         alt="BY THE POWER OF DERP"
-         width="300" height="300" style="float: left;" border="0" /></a></p>
 
     </head>
-    <body bgcolor="black" text="white".
-          link="green" vlink="purple" alink="purple">
+    <body>
+      <div id=endmessage>
+        <p>
+          Success!
+        </p>
+      </div>
+      <br>
+      <div class="homelink" name="homelink" title="homelink">
+        <a class="homebutton" href="../index.html">Home</a>
+      </div>
+
+     <a href="eggs.html"><img src="images/square.jpg"
+           alt="BY THE POWER OF DERP"
+           width="300" height="300" style="float: left;" border="0" /></a></p>
+
     </body>
   </html>
 

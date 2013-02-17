@@ -22,51 +22,51 @@
   <!DOCTYPE html>
   <html>
     <head>
+      <link rel="stylesheet" type="text/css" href="style/zuulforms.css" />
+      <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Check Out!</title>
       <div id="header" name="header" title="Header">
-        <h1><center>Check Out!</center></h1>
-        <p align="center"><a href="index.html">Home</a></p>
-
-        Purchase Zuul Snacks!
-        <ul>
-        <li> Select your username and the item(s) you would like to purchase.
-        <li> ZuulCash will be automatically deducted from your account.
-        </ul>
-
-        <hr width="500" size="6"><br>
+        <img id="balancesbanner" src="images/checkoutbanner.png" height=90 width=1300
+             alt="Balances Banner">
       </div>
+      <hr>
     </head>
-    <body bgcolor="black" text="white".
-          link="green" vlink="purple" alink="purple">
+    <body>
       <div id="purchaseforms" name="purchaseforms" title="Purchase Forms">
-        <p align="left">
-        <b>Who are you?</b><br>
+        <p>
+        Purchase Zuul Snacks!
 
         <form name="userinfo" action="purchase.php" method="post">
-          <select name="username" size="10" method="post" >
-           <?php
-              while($row = mysql_fetch_array($userresult))
-                {
-                  echo "<OPTION value=".$row['username'].">" . $row['username'];
-                }
-           ?>
-          </select></p>
+        Who are you?<br>
+          <div id="userselect">
+            <select name="username" method="post" >
+             <?php
+                while($row = mysql_fetch_array($userresult))
+                  {
+                    echo "<OPTION value=".$row['username'].">" . $row['username'];
+                  }
+             ?>
+            </select><br><br>
+          </div>
+        What are you buying?<br>
+          <div id="itemselect">
+            <select  name="itempurchase[]" size="10" method="post" MULTIPLE>
+             <?php
+                while($row = mysql_fetch_array($itemresult))
+                  {
+                    $itemdisplay = $row['itemname'] . " ($" . $row['itemprice'] . ")";
+                    echo "<OPTION value=".$row['itemname'].">" . $itemdisplay;
+                  }
+             ?>
+            </select>
+          </div>
+          </p>
 
-        <b>What are you buying?</b> <br>
-          <p align="left">
-          <select name="itempurchase[]" size="10" method="post" MULTIPLE>
-           <?php
-              while($row = mysql_fetch_array($itemresult))
-                {
-                  $itemdisplay = $row['itemname'] . " ($" . $row['itemprice'] . ")";
-                  echo "<OPTION value=".$row['itemname'].">" . $itemdisplay;
-                }
-           ?>
-          </select></p>
-          <br><br>
-
-          <center><input type="submit" name="submit" value="submit"><center>
+          <input id="submit" type="submit" name="submit" value="Purchase">
         </form>
+      </div><br>
+      <div class="homelink" name="homelink" title="homelink">
+        <a class="homebutton" href="index.html">Home</a>
       </div>
     </body>
   </html>

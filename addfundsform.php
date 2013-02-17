@@ -20,29 +20,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-    <title>Add ZuulCash</title>
-    <h1><center>Add ZuulCash!<center></h1>
-    <div id="addinstructions" name="addinstructions" title="Instructions">
-      <p align="center"><a href="index.html">Home</a></p>
-      Add funds to purchase Zuul Snacks!
-      <ul>
-      <li> Select your username and enter the amount of money you would
-           like to add. For example, you may enter 5.00 to add $5.
-      <li> Place the cash in the Zuul drawer within bajr's cube.
-      </ul>
-      <hr width="500" size="6">
-      <br>
-    </div>
+      <link rel="stylesheet" type="text/css" href="style/zuulforms.css" />
+      <link rel="stylesheet" type="text/css" href="style/main.css" />
+      <title>Add ZuulCash</title>
+      <div id="header" name="header" title="Header">
+        <img id="balancesbanner" src="images/addfundsbanner.png" height=90 width=1300
+             alt="Balances Banner">
+      </div>
+      <hr>
   </head>
-  <body bgcolor="black" text="white".
-        link="green" vlink="purple" alink="purple">
-    <div id="addforms" name="addforms" title="Add Funds Forms">
-      <p align="left">
-      <b>Who are you?</b>
-      <br><br>
-
+  <body>
+    <div id="purchaseforms" name="purchaseforms" title="Add Funds Forms">
+      <p>
+      Add ZuulCash!
       <form name="userinfo" action="addfunds.php" method="post">
+      Who are you?<br>
         <select name="username" size="10" method="post" >
         <?php
           while($row = mysql_fetch_array($result))
@@ -50,12 +42,16 @@
               echo "<OPTION value=".$row['username'].">" . $row['username'];
             }
         ?>
-        </select></p>
+        </select><br><br>
 
-        <p align="center"> 
-        Amount to Add: $<input type="float" name="addbalance"></p><br>
-        <center><input type="submit" name="submit" value="submit"><center>
+        Amount to Add<br> $<input type="float" name="addbalance"></p>
+        <input id="submit" type="submit" name="submit" value="Add ZuulCash">
       </form>
+      </p>
+    </div>
+    <br>
+    <div class="homelink" name="homelink" title="homelink">
+      <a class="homebutton" href="index.html">Home</a>
     </div>
   </body>
 </html>

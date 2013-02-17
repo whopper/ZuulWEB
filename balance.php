@@ -19,27 +19,30 @@
 
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="style/zuultable.css" />
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
     <title>Zuul Balance</title>
-    <p align="center">Zuul Balance<br>
-    <a href="index.html">Home</a></p>
-
+    <div id="header" name="header" title="Header">
+      <img id="balancesbanner" src="images/balancesbanner.png" height=90 width=1300
+           alt="Balances Banner">
+    </div>
+    <hr>
   </head>
-  <body bgcolor="black" text="white".
-        link="green" vlink="purple" alink="purple">
-    <div id="balancetable" name="balancetable" title="Balance Table">
+  <body>
+    <br>
+    <div id="zuultable" name="zuultable" title="Balance Table">
+      <p>
       <ul>
       <li> A positive balance indicates that you have ZuulCash to spend.
       <li> A negative balance means that you <i>owe</i> the Zuul money!
       </ul>
-      <br>
-
+      <table class="gradienttable">
+      <tr>
+      <th>Item</th>
+      <th>Balance</th>
+      </tr>
+      </p>
       <?php
-        echo "<center><table border='1'>
-              <tr>
-              <th>Item</th>
-              <th>Price</th>
-              </tr></center>";
-
         while($row = mysql_fetch_array($result))
           {
             echo "<tr>";
@@ -48,7 +51,12 @@
             echo "</tr>";
           }
         echo "</table>";
+        echo "<br>";
       ?>
+    </div>
+    <br>
+    <div class="homelink" name="homelink" title="homelink">
+      <a class="homebutton" href="index.html">Home</a>
     </div>
   </body>
 </html>
@@ -57,8 +65,12 @@
 <html>
   <head>
     <title>Error! :(</title>
-    <p align="center">Something went wrong with the Zuul Database!
-                      Yell at whopper to fix it!
-    <a href="zuulmain.html">Home</a></p>
+    Something went wrong with the Zuul Database!
+    Yell at whopper to fix it!
   </head>
+  <body>
+    <div class="homelink" name="homelink" title="homelink">
+      <a class="homebutton" href="index.html">Home</a>
+    </div>
+  </body>
 <?php endif; ?>

@@ -55,13 +55,20 @@
   <!DOCTYPE html>
   <html>
     <head>
+      <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Thank you for your submission!</title>
-      <p align="center">Thanks! Your funds have been added!<br>
-      <a href="index.html">Home</a></p>
-
     </head>
-    <body bgcolor="black" text="white".
-          link="green" vlink="purple" alink="purple">
+    <body>
+      <div id=endmessage>
+        <p>
+          Success!
+        </p>
+      </div>
+      <br>
+      <div class="homelink" name="homelink" title="homelink">
+        <a class="homebutton" href="../index.html">Home</a>
+      </div>
+
     </body>
   </html>
 

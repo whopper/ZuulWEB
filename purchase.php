@@ -44,8 +44,6 @@
       $debtquerydo  = mysql_query($debtquery);
       $debtrow      = mysql_fetch_array($debtquerydo);
       if ( $debtrow['userbalance'] < -10) {
-        echo $username . ",<br><br>";
-        echo "You owe the Zuul more than $10.00! Please be considerate of those who work hard to make the Zuul a reality and pay up immediately!";
       }
       mysql_close();
     }
@@ -56,12 +54,20 @@
   <!DOCTYPE html>
   <html>
     <head>
+      <link rel="stylesheet" type="text/css" href="style/zuulforms.css" />
+      <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Thank you for your submission!</title>
-      <p align="center">Thanks for your purchase!<br>
-      <a href="index.html">Home</a></p>
     </head>
-    <body bgcolor="black" text="white".
-          link="green" vlink="purple" alink="purple">
+    <body>
+      <div id="endmessage">
+        <p>
+          Thanks for your purchase!
+        </p>
+      </div>
+      <br>
+      <div class="homelink" name="homelink" title="homelink">
+        <a class="homebutton" href="index.html">Home</a>
+      </div>
     </body>
   </html>
 

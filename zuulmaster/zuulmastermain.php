@@ -19,30 +19,33 @@
   <!DOCTYPE html>
   <html>
     <head>
+      <link rel="stylesheet" type="text/css" href="../style/zuulmaster.css" />
+      <link rel="stylesheet" type="text/css" href="../style/main.css" />
       <title>ZuulMaster Tools</title>
-      <h1><center>ZuulMaster Tools<br>
-                  <i>Options:</i></center></h1>
-      <p align="center"><a href="../index.html">Home</a></p>
-      <hr width="500" size="6">
-
+      <div id="header" name="header" title="Header">
+        <img id="zuulmasterbanner" src="../images/zuulmastertoolsbanner.png" height=90 width=1300
+             alt="Zuul Master Banner">
+      </div>
+      <hr>
     </head>
-    <body bgcolor="black" text="white".
-          link="green" vlink="purple" alink="purple">
-      <div id="admintoolforms" name="admintoolforms" title="Admin Tool Forms">
+    <body>
+      <div id="additemtool" name="admintoolforms" title="Admin Tool Forms">
         <!--Form for adding item to Zuul inventory -->
-        <h3>Add a new item to the Zuul</h3><br>
+        <p>
+        Add a new item to the Zuul
         <form name="additem" action="zuulmaster.php" method="post">
-          Item name: <input type="text" name="newitemname"><br>
-          Item price: $<input type="text" name="newitemprice"><br>
+          Item name<br> <input type="text" name="newitemname"><br><br>
+          Item price<br> $<input type="text" name="newitemprice"><br>
           <br>
-          <input type="submit" name="submitadditem" value="Add Item">
+          <input id="submit" type="submit" name="submitadditem" value="Add Item">
         </form>
+        </p>
+      </div>
 
-        <hr width="500" size="6">
-        <br><br>
-
+      <div id="adjustitemtool" name="adjustitemtool" title="Change Price Tool">
         <!--Form for changing the price of a Zuul item -->
-        <h3>Change the price of or remove an existing Zuul item</h3><br>
+        <p>
+        Change the price of or remove an existing Zuul item
         <form name="adjustitem" action="zuulmaster.php" method="post">
           <select name="itemselect" size="10" method="post">
           <?php
@@ -52,20 +55,20 @@
                 echo "<OPTION value=".$row['itemname'].">" . $itemdisplay;
               }
           ?>
-          </select></p>
-          <br>New Price: $
+          </select>
+          <br><br>New Price<br> $
           <input type="text" name="newprice"><br>
           <br>
-          <input type="submit" name="submitchangeprice" value="Change Price">
-          <input type="submit" name="submitremoveitem" value="Remove Item">
+          <input id="submit" type="submit" name="submitchangeprice" value="Change Price">
+          <input id="submit" type="submit" name="submitremoveitem" value="Remove Item">
         </form>
+        </p>
+      </div>
 
-        <hr width="500" size="6">
-        <br><br>
-
+      <div id="adjustusertool" name="adjustusertool" title="Adjust User Tool">
        <!--Form for adjusting balance for a user or removing a user -->
-
-        <h3>Adjust user balance or remove a user</h3><br>
+        <p>
+        Adjust user balance or remove a user</h3>
         <form name="adjustuser" action="zuulmaster.php" method="post">
           <select name="userselect" size="10" method="post">
           <?php
@@ -74,14 +77,21 @@
                 echo "<OPTION value=".$row['username'].">" . $row['username'];
               }
           ?>
-          </select></p>
-          <br>New Balance: $
+          </select>
+          <br><br>New Balance<br> $
           <input type="text" name="newbalance"><br>
           <br>
-          <input type="submit" name="submitchangebalance" value="Change Balance">
-          <input type="submit" name="submitremoveuser" value="Remove User">
+            <input id="submit" type="submit" name="submitchangebalance" value="Change Balance">
+          <div id="usersubmit2">
+            <input id="submit" type="submit" name="submitremoveuser" value="Remove User">
+          </div>
         </form>
+        </p>
       </div>
+      <div class="homelinkzm" name="homelinkzm" title="homelink">
+        <a class="homebuttonzm" href="../index.html">Home</a>
+      </div>
+      </p>
     </body>
   </html>
   <?php mysql_close() ?>

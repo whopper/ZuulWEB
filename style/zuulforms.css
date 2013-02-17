@@ -1,11 +1,12 @@
-body > #registerform {margin: 0 auto;height:auto;}
+body > #purchaseforms {margin: 0 auto;height:400px;}
 
-#registerform {
-  width:500px;
-  height:auto;
-  text-align:center;
+#purchaseforms {
+  width:350px;
+  text-align:left;
+  font-size:18;
+  margin-left:50px;
   border-style:groove;
-  border-width:2px;
+  border-width:3px;
   border-color:#480000;
   border-radius:20px;
   background-color:black;
@@ -15,6 +16,9 @@ body > #registerform {margin: 0 auto;height:auto;}
 }
 
 form {
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
   background:-webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
   background:-moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
   margin:auto;
@@ -32,6 +36,7 @@ form {
   -webkit-box-shadow:0px 0px 8px rgba(0, 0, 0, 0.3);
   -moz-box-shadow:0px 0px 8px rgba(0, 0, 0, 0.3);
   box-shadow:0px 0px 8px rgba(0, 0, 0, 0.3);
+
 }
 
 #submit {
@@ -56,4 +61,25 @@ form {
   background:-webkit-gradient(linear, left top, left bottom, from(#64a724), to(#498c25), color-stop(0.4, #579727), color-stop(0.5, #58982a), color-stop(.9, #498c25), color-stop(0.9, #498c25));
   filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#64a724', endColorstr='#498c25', GradientType=0 );
   cursor:pointer;
+}
+
+select {
+  -webkit-appearance: list-box;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

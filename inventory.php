@@ -19,22 +19,27 @@
   <!DOCTYPE html>
   <html>
     <head>
+      <link rel="stylesheet" type="text/css" href="style/zuultable.css" />
+      <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Zuul Inventory</title>
       <div id="header" name="header" title="Header">
-        <p align="center">Zuul Inventory and prices, as managed by bajr.<br>
-        <a href="index.html">Home</a></p>
-      </div>
-    </head>
-    <body bgcolor="black" text="white".
-          link="green" vlink="purple" alink="purple">
-      <div id="inventorytable" name="inventorytable" title="Inventory Table">
-        <?php
-          echo "<center><table border='1'>
-                <tr>
-                <th>Item</th>
-                <th>Price</th>
-                </tr></center>";
+      <img id="balancesbanner" src="images/balancesbanner.png" height=90 width=1300
+           alt="Balances Banner">
 
+      </div>
+      <br>
+    </head>
+    <body>
+      <div id="zuultable" name="Zuultable" title="Inventory Table">
+      <p>
+      Zuul inventory and prices, as managed by bajr.
+      <table class="gradienttable">
+      <tr>
+      <th>Item</th>
+      <th>Price</th>
+      </tr>
+      </p>
+      <?php
           while($row = mysql_fetch_array($result))
             {
               echo "<tr>";
@@ -43,7 +48,12 @@
               echo "</tr>";
             }
           echo "</table>";
+          echo "<br>";
        ?>
+      </div>
+      <br>
+      <div class="homelink" name="homelink" title="homelink">
+        <a class="homebutton" href="index.html">Home</a>
       </div>
     </body>
   </html>
