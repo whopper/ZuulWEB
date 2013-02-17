@@ -1,81 +1,73 @@
 <?php
 
-  $error = FALSE;
+  require "/Library/WebServer/Documents/lib/connectdb.php";
+  $dbconnection = new connectdb();
+  $dbconnection->initiate();
 
-    define ('DB_USER', 'webdev');
-    define ('DB_PASSWORD', 'pass');
-    define ('DB_HOST', 'localhost');
-    define ('DB_NAME', 'zuul');
-    $dbc = @mysql_connect (DB_HOST, DB_USER, DB_PASSWORD) or die('Failure: ' . mysql_error() );
-    mysql_select_db(DB_NAME) or die ('Could not select database: ' . mysql_error() );
+  $error  = FALSE;
+  $query  = "SELECT * FROM users ORDER BY username";
+  $result = mysql_query($query);
 
-    $query = "SELECT * FROM users ORDER BY username";
-    $result = mysql_query($query);
-
-    if (!$result) {
-      exit("&lt;p&gt;MySQL search failure.&lt;/p&gt;");
-    } else {
-      mysql_close();
-    }
+  if (!$result) {
+    exit("&lt;p&gt;MySQL search failure.&lt;/p&gt;");
+  } else {
+    mysql_close();
+  }
 ?>
 
 <?php if( (mysql_num_rows($result) >= 1)): ?>
 
+<!DOCTYPE html>
 <html>
-  <BODY bgcolor="black" text="white".
-      link="green" vlink="purple" alink="purple">
-  <title>
-    Add ZuulCash
-  </title>
   <head>
 
+    <title>Add ZuulCash</title>
     <h1><center>Add ZuulCash!<center></h1>
-    <p align="center"><a href="index.html">Home</a></p>
-
-    Add funds to purchase Zuul Snacks!
-    <UL>
-    <LI> Select your username and enter the amount of money you would
-         like to add. For example, you may enter 5.00 to add $5.
-    <LI> Place the cash in the Zuul drawer within pfaffle's cube.
-    </UL>
-
-    <hr width="500" size="6">
-    <br>
-
+    <div id="addinstructions" name="addinstructions" title="Instructions">
+      <p align="center"><a href="index.html">Home</a></p>
+      Add funds to purchase Zuul Snacks!
+      <ul>
+      <li> Select your username and enter the amount of money you would
+           like to add. For example, you may enter 5.00 to add $5.
+      <li> Place the cash in the Zuul drawer within bajr's cube.
+      </ul>
+      <hr width="500" size="6">
+      <br>
+    </div>
   </head>
-  <body>
+  <body bgcolor="black" text="white".
+        link="green" vlink="purple" alink="purple">
+    <div id="addforms" name="addforms" title="Add Funds Forms">
+      <p align="left">
+      <b>Who are you?</b>
+      <br><br>
 
-    <p align="left">
-    <B>Who are you?</B> <br><br>
-
-    <form name="userinfo" action="addfunds.php" method="post">
-      <SELECT name="username" size="10" method="post" >
-       <?php
+      <form name="userinfo" action="addfunds.php" method="post">
+        <select name="username" size="10" method="post" >
+        <?php
           while($row = mysql_fetch_array($result))
             {
               echo "<OPTION value=".$row['username'].">" . $row['username'];
             }
-       ?>
-      </SELECT></p>
+        ?>
+        </select></p>
 
-      <p align="center"> 
-      Amount to Add: $<input type="float" name="addbalance"><br></p>
-
-        <br><br>
+        <p align="center"> 
+        Amount to Add: $<input type="float" name="addbalance"></p><br>
         <center><input type="submit" name="submit" value="submit"><center>
-    </form>
+      </form>
+    </div>
   </body>
 </html>
 
 <?php else: ?>
+<!DOCTYPE html>
 <html>
-      <title>
-        Error! :(
-      </title>
-      <head>
-        <p align="center">Something went wrong with the Zuul Database!
-        Yell at whopper to fix it!</p>
-        <p align="center"><a href="zuulmain.html">Home</a></p>
-      </head>
+  <head>
+    <title>Error! :(</title>
+    <p align="center">Something went wrong with the Zuul Database!
+                      Yell at whopper to fix it!
+    <a href="zuulmain.html">Home</a></p>
+  </head>
 <?php endif; ?>
 

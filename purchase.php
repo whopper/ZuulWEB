@@ -1,49 +1,37 @@
 <?php
-if (isset($_POST['submit'])) {
-  // Form submitted - handle input
 
-  $username       = $_POST['username'];
-  $purchaseitem   = $_POST['itempurchase'];
+  require "/Library/WebServer/Documents/lib/connectdb.php";
 
-  // Error checking and Security
-  $error = FALSE;
-  if ( isset($username)) {
-    $username = trim($username);
-    $username = strip_tags($username);
-  } else {
-    $error = TRUE;
-  }
-  if ( !isset($purchaseitem)) {
-    $error = TRUE;
-  }
+  if (isset($_POST['submit'])) {
+    // Form submitted - handle input
 
-  if ( isset($username) && isset($purchaseitem) && $error == FALSE ) { 
-      $process = TRUE;
-    } else {
-      $process = FALSE;
-    }
+    $username       = $_POST['username'];
+    $purchaseitem   = $_POST['itempurchase'];
 
-  if ( $process == TRUE ) { 
+    // Error checking and Security
+    $error = FALSE;
 
-    define ('DB_USER', 'webdev');
-    define ('DB_PASSWORD', 'pass');
-    define ('DB_HOST', 'localhost');
-    define ('DB_NAME', 'zuul');
-    $dbc = @mysql_connect (DB_HOST, DB_USER, DB_PASSWORD) or die('Failure: ' . mysql_error() );
+    if ( isset($username) && isset($purchaseitem) && $error == FALSE ) { 
+        $process = TRUE;
+      } else {
+        $process = FALSE;
+      }
 
-    mysql_select_db(DB_NAME) or die ('Could not select database: ' . mysql_error() );
+    if ( $process == TRUE ) {
 
-    // First, determine how much was spent
-    $total = 0;
+      $dbconnection = new connectdb();
+      $dbconnection->initiate();
 
-    foreach ($purchaseitem as $item) {
-      $pricecheck = mysql_query("SELECT itemprice FROM inventory WHERE itemname = '$item'");
-      $row        = mysql_fetch_array($pricecheck);
+      // First, determine how much was spent
+      $total = 0;
 
-      $total      = $total + $row['itemprice'];
-    }
+      foreach ($purchaseitem as $item) {
+        $pricecheck = mysql_query("SELECT itemprice FROM inventory WHERE itemname = '$item'");
+        $row        = mysql_fetch_array($pricecheck);
+        $total      = $total + $row['itemprice'];
+      }
 
-    // Do math to figure out the user's new balance
+      // Do math to figure out the user's new balance
       $balancequery = "UPDATE users SET userbalance = userbalance - '$total' WHERE username = '$username'";
       $newbalance = mysql_query($balancequery);
 
@@ -59,36 +47,32 @@ if (isset($_POST['submit'])) {
         echo $username . ",<br><br>";
         echo "You owe the Zuul more than $10.00! Please be considerate of those who work hard to make the Zuul a reality and pay up immediately!";
       }
-    mysql_close();
+      mysql_close();
+    }
   }
-}
 ?>
 
 <?php if($process == TRUE): ?>
-
-<html>
-  <BODY bgcolor="black" text="white".
-      link="green" vlink="purple" alink="purple">
-
-      <title>
-        Thank you for your submission!
-      </title>
-      <head>
-        <p align="center">Thanks for your purchase!</p>
-        <p align="center"><a href="index.html">Home</a></p>
-
-      </head>
-    </html>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Thank you for your submission!</title>
+      <p align="center">Thanks for your purchase!<br>
+      <a href="index.html">Home</a></p>
+    </head>
+    <body bgcolor="black" text="white".
+          link="green" vlink="purple" alink="purple">
+    </body>
+  </html>
 
 <?php else: ?>
-<html>
-      <title>
-        Error! :(
-      </title>
-      <head>
-        <p align="center">Data processing failed! Either you aren't a registered user or you didn't fill out all of the data fields!</p>
-        <p align="center"><a href="index.html">Home</a></p>
-      </head>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>Error! :(</title>
+      <p align="center">Data processing failed! Either you aren't a
+                        registered user or you didn't fill out all of the data fields!
+      <a href="index.html">Home</a></p>
+    </head>
 
 <?php endif; ?>
-

@@ -1,28 +1,31 @@
+<!DOCTYPE html>
 <html>
-  <BODY bgcolor="black" text="white".
-      link="green" vlink="purple" alink="purple">
-  <title>
-    Zuul User Registration
-  </title>
   <head>
-
-    <h1><center>Zuul User Registration<center></h1>
-    <p align="center"><a href="index.html">Home</a></p>
-
-    Sign up for a Zuul account to access the stash and manage
-    your ZuulCash!
-
-    <hr width="500" size="6">
-    <br>
-
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <link rel="stylesheet" type="text/css" href="style/register.css" />
+    <title>Zuul User Registration</title>
+    <div id="header" name="header" title="Header">
+      <img id="aboutbanner" src="images/registerbanner.png" height=90 width=1300
+           alt="About Banner">
+    </div>
+    <hr>
   </head>
   <body>
+    <div id="registerform" name="registerform" title="Register Form">
+      <p>
+      Sign up for a Zuul account to access the stash and manage
+      your ZuulCash!
 
-    <form name="register" action="register.php" method="post">
-      IRC Handle: <input type="text" name="q1_username"><br>
-      <br>
-      <input type="submit" name="submit" value="submit">
-    </form>
+      <form name="register" action="register.php" method="post">
+        IRC Handle<br> <input type="text" name="q1_username"><br><br>
+        <input id="submit" type="submit" name="submit" value="submit">
+      </form>
+    </div>
+    <br><br>
+    <div class="homelink" name="homelink" title="homelink">
+      <a class="homebutton" href="index.html">Home</a>
+    </div>
+    </p>
   </body>
 </html>
 

@@ -1,0 +1,138 @@
+h1   {color:white;font-family:serif;text-align:center;}
+h5   {color:white;font-family:serif;text-align:center;}
+p    {margin-left:20px;color:white;text-align:center;}
+hr   {width:500;size:6;color:red;}
+li   {color:white;font-family:serif;list-style-position:inside;}
+a    {color:green;font-family:serif;text-align:center;}
+img  {height:130;width:130;border:0;}
+
+body {
+  background-color:black;
+  background-image:url(../images/background.jpg);
+}
+
+body > #mainmenubuttons {margin: 0 auto;width:520px;height:250px;}
+body > #leftmenu {margin-left:60px;width:140px;height:580px;}
+body > #rightmenu {margin-right:60px; width:140px;height:550px}
+body > #lowermenu {margin-top:240px;margin-left:60px;width:140px;height:40px}
+body > .homebutton {margin: 0 auto;width:100px;height:50px;}
+
+#mainlogo {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#header {
+  background-color:#480000;
+}
+
+#mainmenubuttons {
+  width:500px;
+  text-align:center;
+  border-style:groove;
+  border-width:2px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+  background: rgb(0, 0, 0) transparent;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#mainmenubuttons img {
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  -webkit-filter: saturate(100%%);
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+#mainmenubuttons img:hover {
+  -webkit-filter: saturate(300%);
+}
+
+#leftmenu {
+  float:left;
+  margin-left:50px;
+  text-align:center;
+  border-style:groove;
+  border-width:3px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+  background: rgb(0, 0, 0) transparent;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#leftmenu img {
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  border:5px solid #ccc;
+  margin: 15px; 
+  -webkit-transition: margin 0.5s ease-out;
+  -moz-transition: margin 0.5s ease-out; 
+  -o-transition: margin 0.5s ease-out;
+}
+
+#leftmenu img:hover { margin-top:2px;}
+
+#rightmenu {
+  float:right;
+  width:300px;
+  margin:0;
+  text-align:left;
+  border-style:groove;
+  border-width:3px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+  background: rgb(0, 0, 0) transparent;
+  background: rgba(0, 0, 0, 0.8);
+
+}
+
+#rightmenu img {
+  display:inline-block;
+  margin-left:auto;
+  margin-right:auto;
+  border:5px solid #ccc;
+  margin: 15px; 
+  -webkit-transition: margin 0.5s ease-out;
+  -moz-transition: margin 0.5s ease-out; 
+  -o-transition: margin 0.5s ease-out;
+}
+
+#rightmenu img:hover { margin-top:2px;}
+
+#lowermenu {
+  text-align:center;
+  border-style:groove;
+  border-width:3px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+
+}
+.homebutton {
+  background: #480000;
+  padding: 5px 10px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+}
+
+.homelink {
+  text-align:center;
+
+}
