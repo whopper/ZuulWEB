@@ -1,0 +1,111 @@
+p {margin-left:20px;color:white;text-align:left;}
+body > #commentinput {width:350px;height:200px;}
+body > #readcomments {width:500px;height:auto;}
+
+#commentinput {
+  float:left;
+  margin-left:20px;
+  padding:5px;
+  width:500px;
+  border-style:groove;
+  border-width:2px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+  background: rgb(0, 0, 0) transparent;
+  background: rgba(0, 0, 0, 0.8);
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:#09C;
+  text-decoration:none;
+}
+
+#readcomments {
+  position:absolute;
+  left:400px;
+  width:500px;
+  padding:5px;
+  border-style:groove;
+  border-width:2px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+  background: rgb(0, 0, 0) transparent;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.homelinkreq {
+  position:absolute;
+  left:160px;
+  top:340px;
+}
+
+textarea {
+  background:-webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
+  background:-moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  margin-left:5px;
+  position:relative;
+  width:320px;
+  height:110px;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:#09C;
+  text-decoration:none;
+  text-align:left;
+  -webkit-box-shadow:0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:0px 0px 8px rgba(0, 0, 0, 0.3);
+   box-shadow:0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+.comment_meta {
+  float:left;
+  margin-left:3px;
+  padding:2px;
+  width:230px;
+  border-style:groove;
+  border-width:2px;
+  border-color:#480000;
+  border-radius:25px;
+  background-color:black;
+  background-image:none;
+  background: rgb(72, 0, 0) transparent;
+  background: rgba(72, 0, 0, 0.8);
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:12px;
+  line-height:24px;
+  font-weight:bold;
+  color:white;
+  text-decoration:none;
+}
+
+.comment_content {
+  float:left;
+  margin-left:20px;
+  padding:5px;
+  width:400px;
+  border-style:groove;
+  border-width:2px;
+  border-color:#480000;
+  border-radius:20px;
+  background-color:black;
+  background-image:none;
+  background: rgb(0, 0, 0) transparent;
+  background: rgba(256, 256, 256, 0.8);
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:black;
+  text-decoration:none;
+
+}
+

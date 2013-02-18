@@ -1,12 +1,70 @@
+<?php
+
+  require "/Library/WebServer/Documents/lib/connectdb.php";
+  require "/Library/WebServer/Documents/lib/datasanitizer.php";
+
+  $dbconnection = new connectdb();
+  $dbconnection->initiate();
+
+  $error           = FALSE;
+  $getcommentquery = "SELECT * FROM comments ORDER BY time_stamp DESC";
+  $getcommentdo    = mysql_query($getcommentquery);
+
+  if (!$getcommentdo) {
+    exit("&lt;p&gt;MySQL search failure.&lt;/p&gt;");
+  }
+?>
+
+<!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <link rel="stylesheet" type="text/css" href="style/requests.css" />
     <title>Zuul Requests</title>
+    <div id="header" name="header" title="Header">
+      <img id="requestsbanner" src="images/requestsbanner.png" height=90 width=1300
+           alt="Requests Banner">
+    </div>
+    <hr>
   </head>
-  <body bgcolor="black" text="white".
-        link="green" vlink="purple" alink="purple">
-    In progress...
-    <p align="center"><a href="index.html">Home</a></p>
-
+  <body>
+    <!-- Align to left -->
+    <div id="commentinput" name="commentinput" title="Comment Input">
+      Comments or Requests<br>
+      <form name="comments" action="addcomment.php" method="post">
+        <textarea name="comments"></textarea><br><br>
+        <input id="submit" type="submit" name="submit" value="Comment">
+      </form>
+    </div>
+    <!-- Align Center -->
+    <div id="readcomments" name="readcomments" title="Read Comments">
+      <?php
+        if( (mysql_num_rows($getcommentdo) >= 1)) {
+          while($row = mysql_fetch_array($getcommentdo))
+            {
+              echo "<div class='comment_meta'>";
+              if ( $row['username'] != NULL ) {
+                $user = $row['username'];
+              } else {
+                $user = "Anonymous";
+              }
+              echo "$user";
+              echo " at ";
+              echo $row['time_stamp'];
+              echo "</div>";
+              echo "<div class='comment_content'>";
+              echo $row['message'];
+              echo "</div>";
+            }
+        }  else {
+          echo "No comments";
+        }
+      ?>
+    </div>
+    <br>
+    <div class="homelinkreq" name="homelinkreq" title="homelink">
+      <a class="homebutton" href="index.html">Home</a>
+    </div>
   </body>
 </html>
 
