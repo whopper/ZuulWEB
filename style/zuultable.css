@@ -1,23 +1,15 @@
-body > #zuultable {margin: 0 auto;height:auto;}
-
-#zuultable {
+.zuultable {
   width:550px;
+  height:auto;
+  margin:0 auto;
   text-align:left;
   font-size:18;
-  margin-left:50px;
-  border-style:groove;
-  border-width:3px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
-  background: rgba(0, 0, 0, 0.8);
 }
 
 table {
   margin-left:auto;
   margin-right:auto;
+
 }
 table.gradienttable {
   font-family: verdana,arial,sans-serif;
@@ -27,6 +19,7 @@ table.gradienttable {
   border-color: #999999;
   border-collapse: collapse;
 }
+
 table.gradienttable th {
   padding: 5px;
   background: black;
@@ -38,6 +31,7 @@ table.gradienttable th {
   background: linear-gradient(to bottom,  #d5e3e4 0%,#ccdee0 40%,#b3c8cc 100%);
   border: 1px solid #999999;
 }
+
 table.gradienttable td {
   padding: 2px;
   margin:0px auto;
@@ -51,6 +45,7 @@ table.gradienttable td {
   background: linear-gradient(to bottom,  #ebecda 0%,#e0e0c6 40%,#ceceb7 100%);
   border: 1px solid #999999;
 }
+
 table.gradienttable th p{
   margin:0px;
   padding:8px;
@@ -59,6 +54,7 @@ table.gradienttable th p{
   border-left: 1px solid #eefafc;
   border-right:0px;
 }
+
 table.gradienttable td p{
   margin:0px;
   padding:8px;

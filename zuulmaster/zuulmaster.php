@@ -115,7 +115,7 @@
       <title>Thank you for your submission!</title>
     </head>
     <body>
-      <div id=endmessage>
+      <div class="endmessage basicbox">
         <p>
           Success!
         </p>

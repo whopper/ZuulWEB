@@ -30,7 +30,7 @@
   </head>
   <body>
     <br>
-    <div id="zuultable" name="zuultable" title="Balance Table">
+    <div class="zuultable basicbox" name="zuultable" title="Balance Table">
       <p>
       <ul>
       <li> A positive balance indicates that you have ZuulCash to spend.

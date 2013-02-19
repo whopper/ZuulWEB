@@ -29,7 +29,7 @@
       <hr>
     </head>
     <body>
-      <div id="additemtool" name="admintoolforms" title="Admin Tool Forms">
+      <div class="additemtool basicbox" name="admintoolforms" title="Admin Tool Forms">
         <!--Form for adding item to Zuul inventory -->
         <p>
         Add a new item to the Zuul
@@ -42,7 +42,7 @@
         </p>
       </div>
 
-      <div id="adjustitemtool" name="adjustitemtool" title="Change Price Tool">
+      <div class="adjustitemtool basicbox" name="adjustitemtool" title="Change Price Tool">
         <!--Form for changing the price of a Zuul item -->
         <p>
         Change the price of or remove an existing Zuul item
@@ -65,7 +65,7 @@
         </p>
       </div>
 
-      <div id="adjustusertool" name="adjustusertool" title="Adjust User Tool">
+      <div class="adjustusertool basicbox" name="adjustusertool" title="Adjust User Tool">
        <!--Form for adjusting balance for a user or removing a user -->
         <p>
         Adjust user balance or remove a user</h3>

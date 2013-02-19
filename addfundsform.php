@@ -30,7 +30,7 @@
       <hr>
   </head>
   <body>
-    <div id="purchaseforms" name="purchaseforms" title="Add Funds Forms">
+    <div class="purchaseforms basicbox" name="purchaseforms" title="Add Funds Forms">
       <p>
       Add ZuulCash!
       <form name="userinfo" action="addfunds.php" method="post">

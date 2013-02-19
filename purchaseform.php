@@ -32,34 +32,30 @@
       <hr>
     </head>
     <body>
-      <div id="purchaseforms" name="purchaseforms" title="Purchase Forms">
+      <div class="purchaseforms basicbox" name="purchaseforms" title="Purchase Forms">
         <p>
         Purchase Zuul Snacks!
 
         <form name="userinfo" action="purchase.php" method="post">
         Who are you?<br>
-          <div id="userselect">
-            <select name="username" method="post" >
-             <?php
-                while($row = mysql_fetch_array($userresult))
-                  {
-                    echo "<OPTION value=".$row['username'].">" . $row['username'];
-                  }
-             ?>
-            </select><br><br>
-          </div>
+          <select name="username" method="post" >
+           <?php
+              while($row = mysql_fetch_array($userresult))
+                {
+                  echo "<OPTION value=".$row['username'].">" . $row['username'];
+                }
+           ?>
+          </select><br><br>
         What are you buying?<br>
-          <div id="itemselect">
-            <select  name="itempurchase[]" size="10" method="post" MULTIPLE>
-             <?php
-                while($row = mysql_fetch_array($itemresult))
-                  {
-                    $itemdisplay = $row['itemname'] . " ($" . $row['itemprice'] . ")";
-                    echo "<OPTION value=".$row['itemname'].">" . $itemdisplay;
-                  }
-             ?>
-            </select>
-          </div>
+          <select  name="itempurchase[]" size="10" method="post" MULTIPLE>
+           <?php
+              while($row = mysql_fetch_array($itemresult))
+                {
+                  $itemdisplay = $row['itemname'] . " ($" . $row['itemprice'] . ")";
+                  echo "<OPTION value=".$row['itemname'].">" . $itemdisplay;
+                }
+           ?>
+          </select>
           </p>
 
           <input id="submit" type="submit" name="submit" value="Purchase">

@@ -52,7 +52,7 @@
 
     </head>
     <body>
-      <div id=endmessage>
+      <div class="endmessage basicbox">
         <p>
           Success!
         </p>

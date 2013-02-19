@@ -1,63 +1,29 @@
-body > #additemtool {margin-left:10px;width:400px;height:250px;}
-body > #adjustitemtool {margin-left:10px;width:400px;height:380px;}
-body > #adjustusertool {width:400px;height:380px;}
-body > .homebuttonzm {margin: 0 auto;width:100px;height:50px;}
-
-
-
-#additemtool {
-  position:relative;
-  bottom:0px;
-  left:460px;
-  width:350px;
+.additemtool {
+  width:400px;
   height:250px;
-  text-align:center;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-#adjustitemtool {
+  margin-left:10px;
   position:relative;
   bottom:0px;
-  left:250px;
-  width:350px;
-  height:300px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
-  background: rgba(0, 0, 0, 0.8);
+  left:360px;
+  width:400px;
+  height:250px;
 }
 
-#adjustusertool {
+.adjustitemtool {
+  position:relative;
+  bottom:0px;
+  left:150px;
+  width:400px;
+  height:380px;
+  margin-left:10px;
+}
+
+.adjustusertool {
   position:relative;
   bottom:384px;
-  left:665px;
-  width:350px;
-  height:400px
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
-  background: rgba(0, 0, 0, 0.8);
+  left:565px;
+  width:400px;
+  height:380px
 }
 
 form {
@@ -103,8 +69,11 @@ select {
 
 .homebuttonzm {
   position:absolute;
-  bottom:-210px;
-  left:645px;
+  bottom:-170px;
+  left:530px;
+  margin:0 auto;
+  width:70px;
+  height:25px;
   background: #480000;
   padding: 5px 10px;
   -webkit-border-radius: 8px;
@@ -120,6 +89,6 @@ select {
 
 #usersubmit2 {
   position:relative;
-  bottom:30px;
-  left:170px;
+  bottom:28px;
+  left:148px;
 }

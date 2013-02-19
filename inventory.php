@@ -30,7 +30,7 @@
       <br>
     </head>
     <body>
-      <div id="zuultable" name="Zuultable" title="Inventory Table">
+      <div class="zuultable basicbox" name="Zuultable" title="Inventory Table">
       <p>
       Zuul inventory and prices, as managed by bajr.
       <table class="gradienttable">
