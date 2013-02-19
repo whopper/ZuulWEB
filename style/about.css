@@ -1,14 +1,6 @@
-body > #todo {margin: 0 auto;width:500px;height:420px;}
-
-#todo {
+.todo {
   width:500px;
+  height:auto;
+  margin:0 auto;
   text-align:left;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
-  background: rgba(0, 0, 0, 0.8);
 }

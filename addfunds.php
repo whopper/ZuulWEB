@@ -60,9 +60,7 @@
     </head>
     <body>
       <div class="endmessage basicbox">
-        <p>
           Success!
-        </p>
       </div>
       <br>
       <div class="homelink" name="homelink" title="homelink">

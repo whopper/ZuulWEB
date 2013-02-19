@@ -40,7 +40,7 @@ body {
   margin-right:auto;
 }
 
-#header {
+.header {
   background-color:#480000;
 }
 
@@ -48,6 +48,8 @@ body {
   width:200px;
   height:40px;
   margin: 0 auto;
+  text-align:center;
+  color:white;
   font-size:16;
 }
 
@@ -161,4 +163,17 @@ body {
   background:-webkit-gradient(linear, left top, left bottom, from(#64a724), to(#498c25), color-stop(0.4, #579727), color-stop(0.5, #58982a), color-stop(.9, #498c25), color-stop(0.9, #498c25));
   filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#64a724', endColorstr='#498c25', GradientType=0 );
   cursor:pointer;
+}
+
+input, textarea, select {
+    border:2px solid #dadada;
+    border-radius:7px;
+    font-size:20px;
+    padding:5px;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline:none;
+    border-color:#9ecaed;
+    box-shadow:0 0 10px #9ecaed;
 }

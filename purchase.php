@@ -54,20 +54,18 @@
   <!DOCTYPE html>
   <html>
     <head>
-      <link rel="stylesheet" type="text/css" href="style/zuulforms.css" />
       <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Thank you for your submission!</title>
     </head>
     <body>
       <div class="endmessage basicbox">
-        <p>
           Thanks for your purchase!
-        </p>
       </div>
       <br>
       <div class="homelink" name="homelink" title="homelink">
         <a class="homebutton" href="index.html">Home</a>
       </div>
+      <br>
     </body>
   </html>
 

@@ -1,0 +1,68 @@
+.itemacquired {
+  width:750px;
+  height:450px;
+  margin:0 auto;
+  text-align:center;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:white;
+  text-decoration:none;
+  background-image: linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -o-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -moz-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -webkit-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -ms-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+
+background-image: -webkit-gradient(
+  linear,
+  left bottom,
+  left top,
+  color-stop(0.19, rgb(10,10,9)),
+  color-stop(0.81, rgb(66,3,3))
+);
+}
+
+.itemacquired > div {
+  position: relative;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  color:
+  background: #fff;
+}
+
+.itembox {
+  width:auto;
+  height:320px;
+  border:none;
+}
+
+.itemtitle {
+  width:auto;
+  height:30px;
+  display:inline-block;
+  padding:5px;
+  color:yellow;
+  font-style:none;
+  border:none;
+}
+
+.itemimage {
+  float:left;
+  width:330px;
+  height:320px;
+  border:none;
+  background:none;
+  border-radius:0px;
+}
+
+.iteminfo {
+  float:right;
+  width:364px;
+  height:320px;
+  background:none;
+  border:none;
+  border-radius:0px;
+}

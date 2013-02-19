@@ -27,7 +27,7 @@
 
       // Insert the new user into the DB
       if( mysql_num_rows($checkuserdo) === 0) {
-        $adduserquery = "INSERT INTO users VALUES ('','$username','0.00')";
+        $adduserquery = "INSERT INTO users VALUES ('','$username','0.00', '')";
         $adduserdo    = mysql_query($adduserquery);
 
         if (!$adduserdo) {
@@ -53,9 +53,7 @@
     </head>
     <body>
       <div class="endmessage basicbox">
-        <p>
           Success!
-        </p>
       </div>
       <br>
       <div class="homelink" name="homelink" title="homelink">

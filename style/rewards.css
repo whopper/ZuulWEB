@@ -1,0 +1,42 @@
+p {margin-left:20px;color:white;text-align:left;}
+
+.selectuser {
+  width:200px;
+  height:130px;
+  float:left;
+  text-align:left;
+  margin-left:20px;
+  padding:5px;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:#09C;
+  text-decoration:none;
+}
+
+.backpack {
+  position:absolute;
+  left:240px;
+  width:600px;
+  height:400px;
+  display:inline-block;
+  text-align:left;
+  margin-top:30px;
+  margin-left:50px;
+  padding:5px;
+  background: rgb(92, 51, 23) transparent;
+  background: rgba(92, 51, 23, 0.6);
+  border-color:black;
+}
+
+.homelink {
+  float:left;
+  clear:left;
+  margin-left:95px;
+}
+
+#submit {
+  margin-left:55px;
+}

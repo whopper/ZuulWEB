@@ -21,7 +21,7 @@
     <link rel="stylesheet" type="text/css" href="style/main.css" />
     <link rel="stylesheet" type="text/css" href="style/requests.css" />
     <title>Zuul Requests</title>
-    <div id="header" name="header" title="Header">
+    <div class="header" name="header" title="Header">
       <img id="requestsbanner" src="images/requestsbanner.png" height=90 width=1300
            alt="Requests Banner">
     </div>
@@ -29,7 +29,7 @@
   </head>
   <body>
     <!-- Align to left -->
-    <div id="commentinput" name="commentinput" title="Comment Input">
+    <div class="commentinput basicbox" name="commentinput" title="Comment Input">
       Comments or Requests<br>
       <form name="comments" action="addcomment.php" method="post">
         <textarea name="comments"></textarea><br><br>
@@ -37,12 +37,12 @@
       </form>
     </div>
     <!-- Align Center -->
-    <div id="readcomments" name="readcomments" title="Read Comments">
+    <div class="readcomments basicbox" name="readcomments" title="Read Comments">
       <?php
         if( (mysql_num_rows($getcommentdo) >= 1)) {
           while($row = mysql_fetch_array($getcommentdo))
             {
-              echo "<div class='comment_meta'>";
+              echo "<div class='comment_meta basicbox'>";
               if ( $row['username'] != NULL ) {
                 $user = $row['username'];
               } else {
@@ -52,7 +52,7 @@
               echo " at ";
               echo $row['time_stamp'];
               echo "</div>";
-              echo "<div class='comment_content'>";
+              echo "<div class='comment_content basicbox'>";
               echo $row['message'];
               echo "</div>";
             }

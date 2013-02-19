@@ -1,20 +1,11 @@
 p {margin-left:20px;color:white;text-align:left;}
-body > #commentinput {width:350px;height:200px;}
-body > #readcomments {width:500px;height:auto;}
 
-#commentinput {
+.commentinput {
   float:left;
+  width:350px;
+  height:200px;
   margin-left:20px;
   padding:5px;
-  width:500px;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
-  background: rgba(0, 0, 0, 0.8);
   font-family:Tahoma, Geneva, sans-serif;
   font-size:14px;
   font-style:italic;
@@ -24,25 +15,18 @@ body > #readcomments {width:500px;height:auto;}
   text-decoration:none;
 }
 
-#readcomments {
+.readcomments {
   position:absolute;
   left:400px;
   width:500px;
+  height:auto;
   padding:5px;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
-  background: rgba(0, 0, 0, 0.8);
 }
 
 .homelinkreq {
   position:absolute;
   left:160px;
-  top:340px;
+  top:350px;
 }
 
 textarea {
@@ -70,12 +54,7 @@ textarea {
   margin-left:3px;
   padding:2px;
   width:230px;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:25px;
-  background-color:black;
-  background-image:none;
+  border:none;
   background: rgb(72, 0, 0) transparent;
   background: rgba(72, 0, 0, 0.8);
   font-family:Tahoma, Geneva, sans-serif;
@@ -91,13 +70,8 @@ textarea {
   margin-left:20px;
   padding:5px;
   width:400px;
-  border-style:groove;
-  border-width:2px;
-  border-color:#480000;
-  border-radius:20px;
-  background-color:black;
-  background-image:none;
-  background: rgb(0, 0, 0) transparent;
+  border:none;
+  background: rgb(256, 256, 256) transparent;
   background: rgba(256, 256, 256, 0.8);
   font-family:Tahoma, Geneva, sans-serif;
   font-size:14px;
@@ -106,6 +80,4 @@ textarea {
   font-weight:bold;
   color:black;
   text-decoration:none;
-
 }
-
