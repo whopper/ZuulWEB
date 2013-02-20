@@ -11,7 +11,7 @@
   }
   $rarity = weightedrand(1,8,2);
 
-  $itemselect= "SELECT * FROM backpack WHERE rarity='$rarity' ORDER BY rand() limit 1;";
+  $itemselect= "SELECT * FROM items WHERE rarity='$rarity' ORDER BY rand() limit 1;";
   $itemselectdo = mysql_query($itemselect);
   $row = mysql_fetch_array($itemselectdo);
 

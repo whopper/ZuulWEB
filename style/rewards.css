@@ -1,4 +1,8 @@
-p {margin-left:20px;color:white;text-align:left;}
+p {
+  position:relative;
+  top:150px;
+  font-style:none;
+}
 
 .selectuser {
   width:200px;
@@ -16,11 +20,25 @@ p {margin-left:20px;color:white;text-align:left;}
   text-decoration:none;
 }
 
+.backpack_title {
+  width:auto;
+  height:40px;
+  position:absolute;
+  left:290px;
+  color:white;
+  padding:5px;
+  line-height:5px;
+  background: rgb(92, 51, 23) transparent;
+  background: rgba(92, 51, 23, 0.6);
+  border-color:black;
+}
+
 .backpack {
   position:absolute;
   left:240px;
+  top:155px;
   width:600px;
-  height:400px;
+  height:auto;;
   display:inline-block;
   text-align:left;
   margin-top:30px;
@@ -29,6 +47,118 @@ p {margin-left:20px;color:white;text-align:left;}
   background: rgb(92, 51, 23) transparent;
   background: rgba(92, 51, 23, 0.6);
   border-color:black;
+}
+
+.itemicon {
+  width:114px;
+  height:114px;
+  display:inline-block;
+  background-color:white;
+}
+
+.itemicon:hover > .modal{
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  opacity:1
+}
+
+.modal {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal > .itemcard {
+  width: 800px;
+  height:430px;
+  position: relative;
+  right:20px;
+  top:-70px;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 20px;
+  background: #fff;
+  background-image: linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -o-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -moz-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -webkit-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -ms-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
+  background-image: -webkit-gradient(
+
+}
+
+#itemiconimg {
+  position:relative;
+  top:7px;
+  width:100px;
+  height:100px;
+}
+
+.itemtitle {
+  width:auto;
+  height:30px;
+  display:inline-block;
+  padding:5px;
+  font-height:10px;
+  font-style:italic;
+  border:none;
+}
+
+.itemcard {
+  position:absolute;
+  width:100px;
+  height:100px;
+  border-radius:20px;
+}
+
+.itembox {
+  position:relative;
+  top:60px;
+  left:15px;
+  width:770px;
+  height:320px;
+}
+
+.itemimage {
+  float:left;
+  width:400px;
+  height:320px;
+  border:none;
+  background:none;
+  background-color:white;
+  border-radius:10px;
+}
+
+.iteminfo {
+  float:right;
+  width:400px;
+  height:320px;
+  line-height:15px;
+  color:white;
+  font-style:italic;
+  background:none;
+  border:none;
+  border-radius:0px;
 }
 
 .homelink {

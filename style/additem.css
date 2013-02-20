@@ -30,13 +30,13 @@ p {
   background-image: -webkit-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
   background-image: -ms-linear-gradient(bottom, rgb(10,10,9) 19%, rgb(66,3,3) 81%);
 
-background-image: -webkit-gradient(
-  linear,
-  left bottom,
-  left top,
-  color-stop(0.19, rgb(10,10,9)),
-  color-stop(0.81, rgb(66,3,3))
-);
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.19, rgb(10,10,9)),
+    color-stop(0.81, rgb(66,3,3))
+  );
 }
 
 .itemacquired > div {
@@ -54,10 +54,13 @@ background-image: -webkit-gradient(
 }
 
 .itemtitle {
+  position:relative;
+  top:50px;
   width:auto;
-  height:30px;
+  height:40px;
+  line-height:10px;
   display:inline-block;
-  padding:5px;
+  padding:10px;
   font-style:none;
   border:none;
 }
