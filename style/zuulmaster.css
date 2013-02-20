@@ -6,7 +6,7 @@
   bottom:0px;
   left:360px;
   width:400px;
-  height:250px;
+  height:280px;
 }
 
 .adjustitemtool {
@@ -14,25 +14,26 @@
   bottom:0px;
   left:150px;
   width:400px;
-  height:460px;
+  height:480px;
   margin-left:10px;
 }
 
 .adjustusertool {
   position:relative;
-  bottom:463px;
+  bottom:485px;
   left:565px;
   width:400px;
-  height:460px
+  height:480px
 }
 
 form {
   background:-webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-  background:-moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background:-moz-linear-gradient(bottom, left 175px, #CCCCCC, #EEEEEE);
   margin:auto;
   position:relative;
   width:300px;
   height:150px;
+  clear:both;
   font-family:Tahoma, Geneva, sans-serif;
   font-size:14px;
   font-style:italic;
@@ -69,7 +70,7 @@ select {
 
 .homebuttonzm {
   position:absolute;
-  bottom:-220px;
+  bottom:-360px;
   left:530px;
   margin:0 auto;
   width:70px;
@@ -89,6 +90,6 @@ select {
 
 #usersubmit2 {
   position:relative;
-  bottom:28px;
-  left:148px;
+  bottom:30px;
+  left:160px;
 }

@@ -2,6 +2,7 @@
 
   require "/Library/WebServer/Documents/lib/connectdb.php";
   require "/Library/WebServer/Documents/lib/datasanitizer.php";
+  $error = false;
 
   if (isset($_POST['submit'])) {
 
@@ -12,7 +13,7 @@
     $error = FALSE;
     if ( isset($comment) && $comment != "") {
       $sanitizer = new datasanitizer();
-      $username  = ($sanitizer->sanitize($comment));
+      $commentclean  = ($sanitizer->sanitizecomment($comment));
     } else {
       $error = TRUE;
     }
@@ -20,7 +21,7 @@
     if ( $error === FALSE ) {
       $dbconnection = new connectdb();
       $dbconnection->initiate();
-      $addcommentquery = "INSERT INTO comments VALUES ('','$comment','', now())";
+      $addcommentquery = "INSERT INTO comments VALUES ('','$commentclean','', now())";
       $addcommentdo    = mysql_query($addcommentquery);
 
         if (!$addcommentdo) {

@@ -53,7 +53,8 @@
               echo $row['time_stamp'];
               echo "</div>";
               echo "<div class='comment_content basicbox'>";
-              echo $row['message'];
+              $message = nl2br($row["message"]);
+              echo $message;
               echo "</div>";
             }
         }  else {

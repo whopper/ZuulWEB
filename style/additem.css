@@ -1,5 +1,19 @@
+p {
+  position:relative;
+  top:150px;
+  font-style:none;
+}
+
+#item {
+  position:relative;
+  top:10px;
+  left:0px;
+  width:350px;
+  height:300px;
+}
+
 .itemacquired {
-  width:750px;
+  width:820px;
   height:450px;
   margin:0 auto;
   text-align:center;
@@ -34,7 +48,7 @@ background-image: -webkit-gradient(
 }
 
 .itembox {
-  width:auto;
+  width:770px;
   height:320px;
   border:none;
 }
@@ -44,24 +58,25 @@ background-image: -webkit-gradient(
   height:30px;
   display:inline-block;
   padding:5px;
-  color:yellow;
   font-style:none;
   border:none;
 }
 
 .itemimage {
   float:left;
-  width:330px;
+  width:400px;
   height:320px;
   border:none;
   background:none;
-  border-radius:0px;
+  background-color:white;
+  border-radius:10px;
 }
 
 .iteminfo {
   float:right;
   width:364px;
   height:320px;
+  line-height:15px;
   background:none;
   border:none;
   border-radius:0px;

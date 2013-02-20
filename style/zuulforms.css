@@ -11,7 +11,7 @@ form {
   margin-left:auto;
   margin-right:auto;
   background:-webkit-gradient(linear, bottom, left 175px, from(#CCCCCC), to(#EEEEEE));
-  background:-moz-linear-gradient(bottom, #CCCCCC, #EEEEEE 175px);
+  background:-moz-linear-gradient(bottom, left 175px,  #CCCCCC, #EEEEEE);
   margin:auto;
   position:relative;
   width:300px;

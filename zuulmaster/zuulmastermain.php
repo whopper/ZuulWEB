@@ -45,7 +45,7 @@
       <div class="adjustitemtool basicbox" name="adjustitemtool" title="Change Price Tool">
         <!--Form for changing the price of a Zuul item -->
         <p>
-        Change the price of or remove an existing Zuul item
+        Edit an existing Zuul item
         <form name="adjustitem" action="zuulmaster.php" method="post">
           <select name="itemselect" size="10" method="post">
           <?php
@@ -57,8 +57,7 @@
           ?>
           </select>
           <br><br>New Price<br> $
-          <input type="text" name="newprice"><br>
-          <br>
+          <input type="text" name="newprice"><br><br>
           <input id="submit" type="submit" name="submitchangeprice" value="Change Price">
           <input id="submit" type="submit" name="submitremoveitem" value="Remove Item">
         </form>
@@ -79,8 +78,7 @@
           ?>
           </select>
           <br><br>New Balance<br> $
-          <input type="text" name="newbalance"><br>
-          <br>
+          <input type="text" name="newbalance"><br><br>
             <input id="submit" type="submit" name="submitchangebalance" value="Change Balance">
           <div id="usersubmit2">
             <input id="submit" type="submit" name="submitremoveuser" value="Remove User">
