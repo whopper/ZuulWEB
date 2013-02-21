@@ -1,0 +1,62 @@
+.allmenu {
+  width:700px;
+  height:500px;
+}
+
+.totalspent {
+  float:left;
+  width:220px;
+  height:120px;
+  padding:3px;
+  line-height:5px;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:#09C;
+  text-decoration:none;
+}
+
+.popular {
+  float:left;
+  width:220px;
+  height:120px;
+  clear:left;
+  padding:3px;
+  line-height:5px;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:#09C;
+  text-decoration:none;
+}
+
+.statstable {
+  display:inline-block;
+  width:400px;
+  height:400px;
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:14px;
+  font-style:italic;
+  line-height:24px;
+  font-weight:bold;
+  color:#09C;
+  text-decoration:none;
+}
+
+.statitemtext {
+  font-family:Tahoma, Geneva, sans-serif;
+  font-size:25px;
+  line-height:24px;
+  font-weight:bold;
+  color:green;
+  text-decoration:none;
+}
+
+.homelink {
+  position:relative;
+  top:30px;
+}

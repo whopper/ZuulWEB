@@ -20,7 +20,7 @@
       $checkitemquery = "SELECT * FROM inventory WHERE itemname='$newitemname'";
       $checkitemdo    = mysql_query($checkitemquery);
       if( mysql_num_rows($checkitemdo) === 0) {
-        $additemquery = "INSERT INTO inventory VALUES ('','$newitemname','$newitemprice')";
+        $additemquery = "INSERT INTO inventory VALUES ('','$newitemname','$newitemprice', 0)";
         $additemdo    = mysql_query($additemquery);
         if (!$additemdo) {
           exit("&lt;p&gt;MySQL Insertion failure.&lt;/p&gt;");

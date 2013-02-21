@@ -28,6 +28,14 @@
       $balancequery = "UPDATE users SET userbalance = userbalance - '$total' WHERE username = '$username'";
       $newbalance = mysql_query($balancequery);
 
+      // Increment num. purchased for item
+      $purchasedcheckquery = "SELECT purchased FROM inventory WHERE itemname = '$item'";
+      $purchasedcheck      = mysql_query($purchasedcheckquery);
+      $pcheckrow           = mysql_fetch_array($purchasedcheck);
+
+      $new_val       = $pcheckrow['purchased'] + 1;
+      $updatequery   = "UPDATE inventory SET purchased='$new_val' WHERE itemname = '$item'";
+      $updatequerydo = mysql_query($updatequery);
       if (!$newbalance) {
         exit("&lt;p&gt;MySQL Insertion failure.&lt;/p&gt;");
       }
