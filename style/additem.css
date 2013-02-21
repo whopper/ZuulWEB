@@ -55,7 +55,7 @@ p {
 
 .itemtitle {
   position:relative;
-  top:50px;
+  top:10px;
   width:auto;
   height:40px;
   line-height:10px;
@@ -83,4 +83,8 @@ p {
   background:none;
   border:none;
   border-radius:0px;
+}
+
+.endmessage {
+  width:350px;
 }

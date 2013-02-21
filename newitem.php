@@ -9,11 +9,18 @@
       $offset= $max-$min+1;
       return floor($min+pow(lcg_value(), $gamma)*$offset);
   }
-  $rarity = weightedrand(1,8,2);
 
+  $rarity = weightedrand(1,8,2);
   $itemselect= "SELECT * FROM items WHERE rarity='$rarity' ORDER BY rand() limit 1;";
   $itemselectdo = mysql_query($itemselect);
   $row = mysql_fetch_array($itemselectdo);
+  if ( !$row['itemname'] ) {
+    $row['sid']          = '9';
+    $row['itemname']     = 'Lesser Disc of Conjure Unix';
+    $row['rarity']       = '1';
+    $row['imagepointer'] = 'itemimages/LesserDiscLinux.png';
+    $row['description']  = '25% chance of success';
+  }
 
   if ( $row['rarity'] === '1' ) {
     $itemcolor = 'white';

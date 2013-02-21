@@ -114,16 +114,6 @@ p {
   height:100px;
 }
 
-.itemtitle {
-  width:auto;
-  height:30px;
-  display:inline-block;
-  padding:5px;
-  font-height:10px;
-  font-style:italic;
-  border:none;
-}
-
 .itemcard {
   position:absolute;
   width:100px;
@@ -131,9 +121,22 @@ p {
   border-radius:20px;
 }
 
-.itembox {
+
+.itemcard > .itemtitle {
   position:relative;
-  top:60px;
+  top:10px;
+  width:auto;
+  height:40px;
+  display:inline-block;
+  padding:5px;
+  font-height:10px;
+  font-style:italic;
+  border:none;
+}
+
+.itemcard > .itembox {
+  position:relative;
+  top:10px;
   left:15px;
   width:770px;
   height:320px;

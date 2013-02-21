@@ -79,10 +79,12 @@
                 $itemcolor = 'darkorange';
               } elseif ( $row['rarity'] === '8' ) {
                 $itemcolor = 'aqua';
+              } elseif ( $row['rarity'] === '9' ) {
+                $itemcolor = 'aqua';
               }
 
               echo '<div class="itemicon basicbox" name="itemicon">';
-              echo '<img id="itemiconimg" src="'.$row["imagepointer"].'" alt="Item!">';
+              echo '<img id="itemiconimg" width=100 height=100 src="'.$row["imagepointer"].'" alt="Item!">';
 
                 echo '<div class="modal">';
 
@@ -90,7 +92,7 @@
                     echo '<div id="itemtitle" class="itemtitle basicbox">';
                       echo '<h2><font color='.$itemcolor.'>'.$row['itemname'].'</font></h2>';
                     echo '</div>';
-
+                    echo '<br><br><br><br>';
                     echo '<div class="itembox basicbox" name="itembox">';
                       echo '<div id="itemimage" class="itemimage basicbox">';
                       echo '<img id="item" src="'.$row["imagepointer"].'" alt="Item Image!">';
