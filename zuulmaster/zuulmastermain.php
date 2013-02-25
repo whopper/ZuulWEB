@@ -1,6 +1,6 @@
 <?php
 
-  require "/Library/WebServer/Documents/lib/connectdb.php";
+  require "/home/whopper/zuulweb/files/lib/connectdb.php";
   $dbconnection = new connectdb();
   $dbconnection->initiate();
 

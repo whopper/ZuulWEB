@@ -1,7 +1,7 @@
 <?php
 
-  require "/Library/WebServer/Documents/lib/connectdb.php";
-  require "/Library/WebServer/Documents/lib/datasanitizer.php";
+  require "/home/whopper/zuulweb/files/lib/connectdb.php";
+  require "/home/whopper/zuulweb/files/lib/datasanitizer.php";
 
   if (isset($_POST['submit'])) {
 

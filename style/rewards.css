@@ -167,7 +167,9 @@ p {
 .homelink {
   float:left;
   clear:left;
-  margin-left:95px;
+  margin-left:50px;
+  margin-top:15px;
+
 }
 
 #submit {

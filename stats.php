@@ -1,6 +1,6 @@
 <?php
 
-  require "/Library/WebServer/Documents/lib/connectdb.php";
+  require "/home/whopper/zuulweb/files/lib/connectdb.php";
   $dbconnection = new connectdb();
   $dbconnection->initiate();
 
@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="style/stats.css" />
     <link rel="stylesheet" type="text/css" href="style/zuultable.css" />
 
-    <title>About ZuulWEB</title>
+    <title>Zuul Stats</title>
     <div id="header" name="header" title="Header">
       <img id="aboutbanner" src="images/statsbanner.png" height=90 width=1300
            alt="About Banner">
@@ -48,6 +48,10 @@
             if (strpos($total, '.') === false) { 
               $total = "$total".'.00';
             }
+	    $reverse = strrev( $total );
+	    if ( $reverse[1] === "." ) {
+              $total = "$total".'0';
+	    }
             echo "$" .$total;
             echo '</div>';
           ?>

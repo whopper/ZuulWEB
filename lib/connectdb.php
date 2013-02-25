@@ -2,7 +2,7 @@
 
   class connectdb {
     function initiate() {
-      define ('DB_USER', 'webdev');
+      define ('DB_USER', 'whopper');
       define ('DB_PASSWORD', 'pass');
       define ('DB_HOST', 'localhost');
       define ('DB_NAME', 'zuul');

@@ -1,6 +1,6 @@
 <?php
 
-  require "/Library/WebServer/Documents/lib/connectdb.php";
+  require "/home/whopper/zuulweb/files/lib/connectdb.php";
 
   if (isset($_POST['submit'])) {
     $username       = $_POST['username'];
