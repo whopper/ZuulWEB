@@ -27,7 +27,7 @@
 
       // Insert the new user into the DB
       if( mysql_num_rows($checkuserdo) === 0) {
-        $adduserquery = "INSERT INTO users VALUES ('','$username','0.00')";
+        $adduserquery = "INSERT INTO users VALUES ('','$username','0.00', '0')";
         $adduserdo    = mysql_query($adduserquery);
 
         if (!$adduserdo) {

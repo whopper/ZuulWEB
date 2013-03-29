@@ -1,0 +1,4 @@
+AuthType basic
+AuthName "/home/whopper/zuulweb/files"
+AuthUserFile "/home/whopper/zuulweb/.htpasswd"
+require valid-user

@@ -22,8 +22,9 @@
 
     <title>Zuul Stats</title>
     <div id="header" name="header" title="Header">
-      <img id="aboutbanner" src="images/statsbanner.png" height=90 width=1300
-           alt="About Banner">
+      <a id="home" href="index.html"><img id="aboutbanner" 
+	 src="images/statsbanner.png" height=90 width=1300
+         alt="About Banner"></a>
     </div>
     <hr>
   </head>

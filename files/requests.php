@@ -22,8 +22,9 @@
     <link rel="stylesheet" type="text/css" href="style/requests.css" />
     <title>Zuul Requests</title>
     <div class="header" name="header" title="Header">
-      <img id="requestsbanner" src="images/requestsbanner.png" height=90 width=1300
-           alt="Requests Banner">
+      <a id="home" href="index.html"><img id="requestsbanner" 
+         src="images/requestsbanner.png" height=90 width=1300
+          alt="Requests Banner"></a>
     </div>
     <hr>
   </head>

@@ -23,8 +23,9 @@
       <link rel="stylesheet" type="text/css" href="../style/main.css" />
       <title>ZuulMaster Tools</title>
       <div id="header" name="header" title="Header">
-        <img id="zuulmasterbanner" src="../images/zuulmastertoolsbanner.png" height=90 width=1300
-             alt="Zuul Master Banner">
+        <a id="home" href="../index.html"><img id="zuulmasterbanner" 
+           src="../images/zuulmastertoolsbanner.png" height=90 width=1300
+           alt="Zuul Master Banner"></a>
       </div>
       <hr>
     </head>

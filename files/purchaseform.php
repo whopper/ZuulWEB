@@ -26,8 +26,9 @@
       <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Check Out!</title>
       <div id="header" name="header" title="Header">
-        <img id="balancesbanner" src="images/checkoutbanner.png" height=90 width=1300
-             alt="Balances Banner">
+        <a id="home" href="index.html"><img id="balancesbanner" 
+	   src="images/checkoutbanner.png" height=90 width=1300
+           alt="Balances Banner"></a>
       </div>
       <hr>
     </head>
@@ -40,6 +41,7 @@
         Who are you?<br>
           <select name="username" method="post" >
            <?php
+              echo '<option></option>';
               while($row = mysql_fetch_array($userresult))
                 {
                   echo "<OPTION value=".$row['username'].">" . $row['username'];

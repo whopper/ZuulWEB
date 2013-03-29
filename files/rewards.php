@@ -15,10 +15,31 @@
     <link rel="stylesheet" type="text/css" href="style/main.css" />
     <link rel="stylesheet" type="text/css" href="style/rewards.css" />
     <link rel="stylesheet" type="text/css" href="style/additem.css" />
+    <script src="js/crafting.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+    <script type="text/javascript"><!--
+      $(document).ready(function() {
+        // sets the draggable
+        $('#drag .drg').draggable({
+          zIndex: 2500,
+          cursor: 'move',          // sets the cursor apperance
+          revert: 'invalid'
+        });
+
+        // sets droppable
+        $('#drop').droppable({
+          zIndex: 1000,
+          drop: function(event, ui) {
+          }
+        });
+      });
+  --></script>
     <title>Zuul Rewards</title>
     <div id="header" name="header" title="Header">
-      <img id="requestsbanner" src="images/rewardsbanner.png" height=90 width=1300
-           alt="Requests Banner">
+      <a id="home" href="index.html"><img id="requestsbanner" 
+         src="images/rewardsbanner.png" height=90 width=1300
+         alt="Requests Banner"></a>
     </div>
     <hr>
   </head>
@@ -29,6 +50,7 @@
           Open the backpack of...<br>
           <select name="username" method="post" >
            <?php
+              echo '<option></option>';
               while($userlistrow = mysql_fetch_array($userlistdo))
                 {
                   echo "<OPTION value=".$userlistrow['username'].">" . $userlistrow['username'];
@@ -39,8 +61,11 @@
         <input id="submit" type="submit" name="submit" value="Open">
       </form>
     </div>
+    <div class="craftbutton basicbox">
+        <input class="startcraft" type="button" onclick="modalpop('overlay');" name="startcraft" value="Craft Items! (Beta)">
+    </div>
     <!-- Align Center -->
-    <div class="backpack_title basicbox" name="backpack_title" title="Backpack Title">
+    <div class="backpack_title basicbox" name="backpack_title">
       <?php 
         $username = $_GET['username'];
         if ( $username != '' ) {
@@ -83,8 +108,8 @@
                 $itemcolor = 'aqua';
               }
 
-              echo '<div class="itemicon basicbox" name="itemicon">';
-              echo '<img id="itemiconimg" width=100 height=100 src="'.$row["imagepointer"].'" alt="Item!">';
+              echo '<div id="drag" class="itemicon basicbox" name="itemicon">';
+              echo '<img id="itemiconimg" class="drg" width=100 height=100 src="'.$row["imagepointer"].'" alt="Item!">';
 
                 echo '<div class="modal">';
 
@@ -110,6 +135,28 @@
             }
         }
       ?>
+    </div>
+    <div class="craftboxmain">
+      <div id="overlay">
+        <div id="craftmenu">
+          <a href="#close" onclick="modalpop('overlay')" title="Close" class="close">X</a>
+          Drag three items of the same Item Level below for a chance to craft a higher tier item!<br><br>
+          <div class="craftitemscontainer">
+            <div id="drop" class="basiccraftitem">
+
+            </div>
+            <div id="drop" class="basiccraftitem">
+
+            </div>
+            <div id="drop" class="basiccraftitem">
+
+            </div>
+            <br><br>
+              <input class="initcraft startcraft" disabled type="button" onclick="initcraft()" name="initcraft" value="Drag in Three Items">
+
+          </div>
+        </div>
+      </div>
     </div>
     <br>
     <div class="homelink" name="homelink" title="homelink">

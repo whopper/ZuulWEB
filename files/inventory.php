@@ -23,8 +23,9 @@
       <link rel="stylesheet" type="text/css" href="style/main.css" />
       <title>Zuul Inventory</title>
       <div id="header" name="header" title="Header">
-      <img id="balancesbanner" src="images/pricesbanner.png" height=90 width=1300
-           alt="Balances Banner">
+      <a id="home" href="index.html"><img id="balancesbanner" 
+         src="images/pricesbanner.png" height=90 width=1300
+           alt="Balances Banner"></a>
 
       </div>
       <br>
