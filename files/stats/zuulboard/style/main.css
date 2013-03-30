@@ -1,0 +1,71 @@
+/* Generic Container elements */
+
+body {
+  background: #F0F0F0;
+}
+
+#mainContainer {
+  position: absolute;
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#boardHeader {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 35px;
+}
+
+#boardHeader hr {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+  background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+  background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+  background-image:      -o-linear-gradient(left, #ccc, #333, #ccc);
+}
+
+#boardHeaderTitle {
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  color: orange;
+  font-size: 18px;
+}
+
+#boardHeaderSubTitle {
+  position: absolute;
+  top: 5px;
+  left: 120px;
+  color: gray;
+  font-size: 12px;
+}
+
+.metricContainer {
+  width: 400px;
+  height: 300px;
+}
+
+.containerTitle {
+  z-index: 999;
+  font-size: 16px;
+  color: orange;
+}
+
+.containerTitleBar {
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 5px;
+  width: 150px;
+  height: 1px;
+  style: solid;
+  color: gray;
+  background-color: gray;
+}

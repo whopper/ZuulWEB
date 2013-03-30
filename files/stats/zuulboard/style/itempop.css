@@ -1,0 +1,6 @@
+/* Item popularity specific elements */
+#itemPopContainer {
+  position: absolute;
+/*  left: 420px; */
+  top: 20px;
+}
