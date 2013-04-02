@@ -7,7 +7,7 @@
   $error = FALSE;
   $itemquery  = "SELECT * FROM inventory ORDER BY itemprice DESC";
   $itemresult = mysql_query($itemquery);
-  $userquery  = "SELECT * FROM users ORDER BY username";
+  $userquery  = "SELECT * FROM users ORDER BY numpurchased DESC";
   $userresult = mysql_query($userquery);
 
   if (!$itemresult || !$userresult) {
